@@ -51,3 +51,15 @@ git checkout full-review
 git reset --hard main
 git commit --allow-empty -m "Full review trigger"
 git push -f origin full-review
+
+## 現在存在するブランチを確認
+git branch
+
+## ローカルブランチ削除
+git branch -d "ブランチ名"
+
+## ローカルブランチ 強制削除
+git branch -D "ブランチ名"
+
+## GitHub上のブランチ削除
+git push origin --delete "ブランチ名"
