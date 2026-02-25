@@ -1,0 +1,4 @@
+language: ja
+tone_instructions: "日本語で具体的にレビューしてください"
+review:
+  high_level_summary: true
