@@ -63,5 +63,3 @@ git branch -D "ブランチ名"
 
 ## GitHub上のブランチ削除
 git push origin --delete "ブランチ名"
-
-
