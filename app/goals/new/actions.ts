@@ -17,7 +17,7 @@ export async function createGoal(formData: FormData) {
   const totalHours =
     Number(formData.get("totalHours"));
 
-  if (!title || !targetDate || !totalHours) return;
+  if (!tle || !targetDate || !totalHours) return;
 
   await prisma.goal.create({
     data: {
