@@ -1,0 +1,38 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Goal {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String?
+  targetDate  DateTime
+  totalHours  Int
+  tasks       Task[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Task {
+  id             Int      @id @default(autoincrement())
+  goalId         Int
+  goal           Goal     @relation(fields: [goalId], references: [id])
+  title          String
+  detail         String?
+  estimatedHours Int
+  status         String
+  scheduledDate  DateTime
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
