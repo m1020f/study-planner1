@@ -45,3 +45,9 @@ git checkout -b "ブランチ名"
 
 ## ブランチ切り替え
 git checkout "ブランチ名"
+
+## フルレビュー
+git checkout full-review
+git reset --hard main
+git commit --allow-empty -m "Full review trigger"
+git push -f origin full-review
