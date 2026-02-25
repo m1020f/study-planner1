@@ -22,3 +22,5 @@ CREATE TABLE "Task" (
     "updatedAt" DATETIME NOT NULL,
     CONSTRAINT "Task_goalId_fkey" FOREIGN KEY ("goalId") REFERENCES "Goal" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
 );
+
+

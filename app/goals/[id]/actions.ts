@@ -39,3 +39,4 @@ export async function updateTaskStatus(
   // 詳細ページを再描画
   revalidatePath(`/goals/${goalId}`);
 }
+

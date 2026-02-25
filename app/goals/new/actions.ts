@@ -30,3 +30,4 @@ export async function createGoal(formData: FormData) {
 
   redirect("/goals");
 }
+
